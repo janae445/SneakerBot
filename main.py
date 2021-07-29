@@ -5,8 +5,6 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
-import time
-import webbrowser
 
 rules = ( Rule(LinkExtractor(restrict_xpaths='//a[contains(@class,"product-link")]',deny=('_[WM]\.html',)),
                 callback='singleProductParse'),
